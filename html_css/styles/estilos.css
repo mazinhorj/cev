@@ -5,8 +5,18 @@ body {
 
 }
 
+.redes {
+	font: 16pt Tahoma;
+}
+
 p {
     text-align: justify;
+}
+
+div#lista {
+	background: #f90;
+	padding: 10px;
+	width: 250px;
 }
 
 .btn_social { 

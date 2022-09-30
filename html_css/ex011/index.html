@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/estilos.css">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <title>EX011</title>
+</head>
+<body>
+    <main>
+        <div style="padding: 20px;">
+            <h1>Mídias</h1>
+
+            <h2>Áudio</h2>
+            <!--primeira forma-->
+            <!--audio src="media/bgsound.mp3" controls ></audio> autoplay após controls-->
+            <audio preload="metadata" controls autoplay loop>
+                <source src="media/bgsound.mp3" type="audio/mpeg">
+                <!--só vai carregar o próximo arquivo se o anterior não carregar-->
+                <!--source src="media/bgsound.ogg" type="audio/ogg"-->
+                <!--source src="media/bgsound.wav" type="audio/wav"-->
+                <p>Não foi possível carregar o áudio.</p>
+            </audio>
+            
+            <hr>
+            
+
+
+            
+            <h2>Imagens adaptáveis / dinâmicas</h2>
+            <p>Imagens que se adaptam aos vários tamanhos de tela</p>
+            <picture>
+                <source media="(max-width: 750px)" srcset="img/pequena.png" type="image/png">
+                <source media="(max-width: 1050px)" srcset="img/media.png" type="image/png">
+                <img src="img/grande.png" alt="imagem grande">
+            </picture>
+            
+            <hr>
+            <p><a href="../index.html" rel="prev">VOLTAR INÍCIO</a></p>
+
+        </div>
+    </main>
+</body>
+</html>
