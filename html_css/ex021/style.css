@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(224, 224, 224);
+    margin: 0;
+}
+
+header, main {
+    background-color: aliceblue;
+    padding: 12px;
+    margin: 12px;
+    border-radius: 8px;
+}
+
+#titulo_site {
+    text-align: center;
+}
+
+nav {
+    text-align: right;
+    background-color: rgb(112, 112, 112);
+    border-radius: 5px;
+    padding: 12px;
+    color: rgb(255, 255, 255);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.404);
+}
+
+nav ul {
+    display: inline-block;
+    background-color: rgb(82, 82, 82);
+    width: fit-content;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+nav > ul > li {
+    display: none;
+}
+
+nav > ul:hover > li {
+    display: block;
+    margin-top: 10px;
+}
+
+nav > ul > li> a {
+    text-decoration: none;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+nav > ul > li > a:hover {
+    color: rgb(158, 156, 160);
+    text-decoration: underline;
+}
+
+p {
+    text-align: justify;
+}
+
+article {
+    background-color: rgba(198, 204, 209, 0.349);
+    padding: 4px;
+    margin: 4px;
+    border-radius: 4px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.171);
+}
+
+article > aside {
+    background-color: rgba(198, 204, 209, 0.842);
+    text-align: right;
+    padding: 0 8px;
+    overflow: hidden;
+}
+
+footer {
+    background-color: black;
+    color: aliceblue;
+    padding: 5px;
+}
+
+footer > p {
+    text-align: center;
+}

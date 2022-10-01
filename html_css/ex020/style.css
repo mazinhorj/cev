@@ -39,7 +39,7 @@ div#txt {
     margin-top: 5px;
 }
 
-div#interna {
+#interna {
     background-color: rgb(255, 255, 255);
     border: 1px solid rgb(0, 0, 0);
     text-align: center;
@@ -48,20 +48,43 @@ div#interna {
     margin-top: 5px;
 }
 
-div#interna > p {
+#interna > p {
     display: none;
 }
 
-div#interna:hover > p {
+#interna:hover > p {
     display: block;
 }
 
-div#lilinks {
+#lilinks {
     background-color: rgb(255, 255, 255);
-    border: 1px solid rgb(0, 0, 0);
-    text-align: center;
+    border: 1px solid rgb(207, 47, 47);
+    text-align: left;
     height: 150px;
     width: 512px;
-    margin: auto;
+}
+
+li > a {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+li > a:visited {
+    color: rgb(12, 100, 100);
+}
+
+li > a:hover {
+    color: blueviolet;
+}
+
+li > a:active {
+    color: black;
+}
+
+li > a::after {
+    content: '[link]';
+    font-weight: lighter;
+    font-size: 14px;
 }
 
