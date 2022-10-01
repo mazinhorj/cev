@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+div {
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    height: 200px;
+    width: 200px;
+
+}
+
+/*
+# seleciona o id
+. formata uma classe
+Os : ativam uma pseudoclasse, que fará algo com o estado/ação
+:: selecionam pseudoelemento
+O > aponta para um elemento child
+*/
+
+div#d1:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+div#d2:hover {
+    background-color: rgb(0, 255, 0);
+}
+
+div#d3:hover {
+    background-color: rgb(0, 0, 255);
+}
+
+div#txt {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    height: 200px;
+    width: 612px;
+    margin-top: 5px;
+}
+
+div#interna {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    height: 100px;
+    width: 512px;
+    margin-top: 5px;
+}
+
+div#interna > p {
+    display: none;
+}
+
+div#interna:hover > p {
+    display: block;
+}
+
+div#lilinks {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    height: 150px;
+    width: 512px;
+    margin: auto;
+}
+
