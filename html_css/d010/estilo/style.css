@@ -183,7 +183,8 @@ aside > h3 {
     box-shadow: 4px 0px 8px rgba(0, 0, 0, 0.205);
 }
 
-aside > ul {
+aside ul {
+    font-size: 0.8em;
     list-style-type: '\2714\00A0\00A0';
     list-style-position: inside;
     columns: 2;

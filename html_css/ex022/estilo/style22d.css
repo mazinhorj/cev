@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+body {
+    font: optional;
+    height: 98vh;
+    border: 1px dashed red;
+    background-image: url('https://cdn.pixabay.com/photo/2016/07/11/17/43/abstract-1510187_960_720.png');
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
