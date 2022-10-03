@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS004</title>
+    <style>
+        body {
+            font: 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+
+
+    <script>
+        nome=prompt('Nome?');
+        document.write(`Seu nome tem ${nome.length} letras<br/>`);
+        salario=7952.8;
+        // salario=salario.toFixed(2).replace('.',','); coloca com 2 casass decimais e substitui o ponto por virgula
+        salario=salario.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) // formata em moeda BRL/USD/EUR...
+        document.write(`Seu salário é: ${salario}`);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>JS-A10E07</title>
+    <style>
+        body {
+            background: gray;
+            font: 16pt Arial;
+            color: aliceblue;
+            text-align: center;
+            
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Teste DOM</h1>
+    <p>Mão na massa</p>
+    <div id="main">
+        N1: <input type="number" name="txtn1" id="txtn1" placeholder="0"> <strong>+</strong>
+        N2: <input type="number" name="txtn2" id="txtn2" placeholder="0">
+        <input type="button" value="Somar" onclick="somar()">
+        <div id="res">
+            Resultado
+        </div>
+
+    </div>
+
+    <script>
+        function somar(){
+            tn1 = document.getElementById('txtn1');
+            tn2 = document.querySelector('input#txtn2');
+            n1 = Number(tn1.value);
+            n2 = Number(tn2.value);
+            res = document.getElementById('res');
+            s = n1 + n2;
+            res.innerHTML = `O resultado de ${n1} + ${n2} é ${s}.`;
+        }
+
+    </script>
+</body>
+</html>
