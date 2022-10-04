@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS - Condição dupla</title>
+    <title>JS - Condições</title>
 </head>
 <body>
     <main>
@@ -35,13 +35,15 @@
                             if (vel >= 61) {
                                 av.innerHTML = 'Cuidado! Você pode ser multado.';
                             } else {
-                                av.innerHTML = 'Passou dentro do limite.';
+                                if (vel <= 30) {
+                                    av.innerHTML = 'Sua tartaruga!';
+                                    } else {
+                                        av.innerHTML = 'Passou dentro do limite.';
+                                    }
                             }
+                        }
                     }
                 }
-            }
-
-        
     </script>
 </body>
 </html>
