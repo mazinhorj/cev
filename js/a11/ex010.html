@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Condição dupla</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Sistema de multas</h1>
+            <p>Velocidade aferida: <input type="number" name="txtvel" id="txtvel"> km/h.</p>
+            <input type="button" value="Verificar" onclick="calcular()">
+            <div id="res">
+
+            </div>
+            <div id="aviso"></div>
+        </section>
+    </main>
+    <script>
+        function calcular(){
+            velo = document.querySelector('input#txtvel');
+            res = document.querySelector('div#res');
+            av = document.querySelector('div#aviso');
+            vel = Number(velo.value);
+            res.innerHTML = `<p>Velocidade: <strong>${vel}km/h</strong>.</p>`;
+
+            if (vel > 150) {
+                av.innerHTML = 'Caralho! The Flash...';
+                } else {
+                    if (vel > 66) {
+                        av.innerHTML = 'Você foi multado.';
+                        } else {
+                            if (vel >= 61) {
+                                av.innerHTML = 'Cuidado! Você pode ser multado.';
+                            } else {
+                                av.innerHTML = 'Passou dentro do limite.';
+                            }
+                    }
+                }
+            }
+
+        
+    </script>
+</body>
+</html>
