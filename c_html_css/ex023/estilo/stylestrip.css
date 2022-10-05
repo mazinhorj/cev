@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#tab {
+    display: inline-block;
+}
+
+table {
+    border: 1px solid black;
+    width: 680px;
+    border-collapse: collapse;
+    position: relative;
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    background-image: linear-gradient(to right, green 40%, yellow 60%, blue 90%, white 98%);
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 10px white;
+    border: 1px solid black;
+    border-bottom: 0;
+    padding: 8px;
+}
+
+thead {
+    color: white;
+}
+
+thead > tr > th {
+    position: sticky;
+    top: -1px;
+    background-color: rgb(105, 105, 105);
+}
+
+th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+.tot {
+    text-align: right;
+    padding-right: 15px;
+}
+
+tfoot {
+    background-image: linear-gradient(to right, green 40%, yellow 60%, blue 90%, white 98%);
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 10px white;
+}
+
+.num {
+    text-align: right;
+}
+
+.no:nth-child(odd) {
+    background-color: rgb(142, 230, 156);
+}
+
+.no:nth-child(even) {
+    background-color: rgb(201, 233, 206);
+}
+
+#tno {
+    background-color: rgb(92, 180, 96);
+}
+
+.ne:nth-child(odd) {
+    background-color: rgb(230, 142, 142);
+}
+
+.ne:nth-child(even) {
+    background-color: rgb(233, 210, 210);
+}
+
+#tne {
+    background-color: rgb(190, 92, 82);
+}
+
+.co:nth-child(odd) {
+    background-color: rgb(229, 230, 142);
+}
+
+.co:nth-child(even) {
+    background-color: rgb(229, 230, 198);
+}
+
+#tco {
+    background-color: rgb(189, 180, 82);
+}
+
+.se:nth-child(even) {
+    background-color: rgb(202, 142, 230);
+}
+
+.se:nth-child(odd) {
+    background-color: rgb(218, 196, 228);
+}
+
+#tse {
+    background-color: rgb(162, 92, 170);
+}
+
+.su:nth-child(odd) {
+    background-color: rgb(142, 195, 230);
+}
+
+.su:nth-child(even) {
+    background-color: rgb(188, 213, 229);
+}
+
+#tsu {
+    background-color: rgb(102, 145, 170);
+}

@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#tab {
+    display: inline-block;
+}
+
+table {
+    border: 1px solid black;
+    width: 680px;
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: lightgray;
+    padding: 8px;
+}
+
+thead {
+    background-color: rgb(104, 104, 104);
+    color: white;
+}
+
+th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+.tot {
+    text-align: right;
+    padding-right: 15px;
+}
+
+tfoot {
+    background-image: linear-gradient(to right, green 40%, yellow 70%, blue 80%, white 90%);
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 10px white;
+}
+
+.num {
+    text-align: right;
+}
+
+.no {
+    background-color: rgb(142, 230, 156);
+}
+
+#tno {
+    background-color: rgb(92, 180, 96);
+}
+
+.ne {
+    background-color: rgb(230, 142, 142);
+}
+
+#tne {
+    background-color: rgb(190, 92, 82);
+}
+
+.co {
+    background-color: rgb(229, 230, 142);
+}
+
+#tco {
+    background-color: rgb(189, 180, 82);
+}
+
+.se {
+    background-color: rgb(202, 142, 230);
+}
+
+#tse {
+    background-color: rgb(162, 92, 170);
+}
+
+.su {
+    background-color: rgb(142, 195, 230);
+}
+
+#tsu {
+    background-color: rgb(102, 145, 170);
+}
