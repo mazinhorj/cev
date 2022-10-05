@@ -9,3 +9,8 @@ if (vel > 60) {
     console.log(`Dentro do limite.`)
 }
 console.log(`Dirija com prudência e atenção!`)
+
+time = new Date();
+
+hora = time.getMonth();
+console.log(hora)

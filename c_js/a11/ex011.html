@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Condições aninhadas 2</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Sistema Eleitoral</h1>
+            <p>Qual a sua idade? <input type="number" name="txtage" id="txtage"> anos.</p>
+            <input type="button" value="Verificar" onclick="verificar()">
+            <div id="res">
+
+            </div>
+            <div id="aviso"></div>
+        </section>
+    </main>
+    <script>
+        function verificar(){
+            idade = document.querySelector('input#txtage');
+            res = document.querySelector('div#res');
+            av = document.querySelector('div#aviso');
+            iidade = Number(idade.value);
+            res.innerHTML = `<p>Você tem <strong>${idade.value} anos</strong>.</p>`;
+
+            if (iidade < 16) {
+                av.innerHTML = 'Não tem idade para votar';
+                } else {
+                    if (iidade >= 65 || iidade < 18) {
+                        av.innerHTML = 'Seu voto é facultativo.';
+                        } else {
+                            av.innerHTML = 'Seu voto é obrigatório.';
+                            }
+                        }
+                    }
+    </script>
+</body>
+</html>

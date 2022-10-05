@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Swich case</title>
+</head>
+<body>
+    <h1>Olá!</h1>
+    <p>Você acessou esta página exatamente dia <span id="diames"></span> de <span id="mes"></span>, <span id="diasem"></span>, às <span id="horas"></span>:<span id="minutos"></span>:<span id="segundos"></span></p>
+    <p id="educado"></p>
+
+    <script>
+        tempo = new Date();
+        dmes = document.querySelector('span#diames');
+        ddmes = tempo.getDate();
+        if (ddmes > 31) {
+            ddmes = '[ERRO] sei lá que dia';
+        }
+        mes = document.querySelector('span#mes');
+        mmes = tempo.getMonth();
+        switch(mmes){
+            case 0:
+                mmes = 'janeiro';
+                break
+            case 1:
+                mmes = 'fevereiro';
+                break
+            case 2:
+                mmes = 'março';
+                break
+            case 3:
+                mmes = 'abril';
+                break
+            case 4:
+                mmes = 'maio';
+                break
+            case 5:
+                mmes = 'junho';
+                break
+            case 6:
+                mmes = 'julho';
+                break
+            case 7:
+                mmes = 'agosto';
+                break
+            case 8:
+                mmes = 'setembro';
+                break
+            case 9:
+                mmes = 'outubro';
+                break
+            case 10:
+                mmes = 'novembro';
+                break
+            case 11:
+                mmes = 'dezembro';
+                break
+            default:
+                mmes = '[ERRO] sei lá que mês';
+                break
+        }
+        dsem = document.querySelector('span#diasem');
+        ddsem = tempo.getDay();
+        switch(ddsem){
+            case 0:
+                ddsem = 'domingo';
+                break
+            case 1:
+                ddsem = 'segunda-feira';
+                break
+            case 2:
+                ddsem = 'terça-feira';
+                break
+            case 3:
+                ddsem = 'quarta-feira';
+                break
+            case 4:
+                ddsem = 'quinta-feira';
+                break
+            case 5:
+                ddsem = 'sexta-feira';
+                break
+            case 6:
+                ddsem = 'sábado';
+                break
+            default:
+                ddsem = '[ERRO] sei lá que dia da semana';
+                break
+        }
+        hora = document.querySelector('span#horas');
+        hhora = tempo.getHours();
+        minuto = document.querySelector('span#minutos');
+        mminuto = tempo.getMinutes();
+        segundo = document.querySelector('span#segundos');
+        ssegundo = tempo.getSeconds();
+        msg = document.querySelector('p#educado');
+
+        dmes.innerHTML = ddmes;
+        mes.innerHTML = mmes;
+        dsem.innerHTML = ddsem;
+        hora.innerHTML = hhora;
+        minuto.innerHTML = mminuto;
+        segundo.innerHTML = ssegundo;
+
+    </script>
+</body>
+</html>

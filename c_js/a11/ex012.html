@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - Condições aninhadas 3</title>
+</head>
+<body>
+    <h1>Bom/Boa (dia/tarde/noite)!</h1>
+    <p>Você acessou exatamente <span id="horas"></span>:<span id="minutos"></span>:<span id="segundos"></span></p>
+    <p id="educado"></p>
+    <script>
+        tempo = new Date();
+        hora = document.querySelector('span#horas');
+        hhora = tempo.getHours();
+        minuto = document.querySelector('span#minutos');
+        mminuto = tempo.getMinutes();
+        segundo = document.querySelector('span#segundos');
+        ssegundo = tempo.getSeconds();
+        msg = document.querySelector('p#educado');
+        
+        hora.innerHTML = hhora;
+        minuto.innerHTML = mminuto;
+        segundo.innerHTML = ssegundo;
+
+        if (hhora < 12) {
+            msg.innerHTML = 'Bom dia!';
+        } else if (hhora > 18) {
+            msg.innerHTML = 'Boa noite!';
+        } else {
+            msg.innerHTML = 'Boa tarde!';
+        }
+
+    </script>
+</body>
+</html>
