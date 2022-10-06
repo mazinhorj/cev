@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+body {
+    background-color: rgb(205, 212, 212);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+table {
+    border-collapse: collapse;
+    display: inline-block;
+}
+
+table thead td {
+    border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+    padding: 4px;
+}
+
+td {
+    border: 1px solid black;
+    padding: 4px;
+}
