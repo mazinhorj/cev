@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Vídeo</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style>
+            * {
+                text-align: center;
+            }
+
+            .vd {
+                margin: 20px;
+            }
+
+            .modal-content iframe {
+                margin: 0 auto;
+                display: block;
+                height: 350px;
+            }
+
+            .btn-primary {
+                background-color: #1c588c !important;
+                border: 0;
+                border-radius: 8px;
+                box-shadow: 1px 1px 8px 2px rgba(0, 0, 0, 0.315);
+                text-decoration: none !important;
+            }
+
+            .btn-primary:hover {
+                background-color: #f28a2e!important;
+                color: black;
+            }
+        </style>
+        <script>
+            $(document).ready(function() {
+                var url = $("#mvideo_").attr('src');
+                $("#mvideo").on('hide.bs.modal', function() {
+                    $("#mvideo_").attr('src', '');
+                });
+                $("#mvideo").on('show.bs.modal', function() {
+                    $("#mvideo_").attr('src', url);
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <div class="vd">
+            <a href="#mvideo" class="btn btn-lg btn-primary" data-toggle="modal">Assistir Vídeo</a>
+            <div id="mvideo" class="modal fade">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <span id="tit">Reestruturação Curricular</span>
+                        </div>
+                        <div class="modal-body">
+                            <iframe id="mvideo_" width="100%" height="100%" src="https://www.youtube.com/embed/V5he1JXiQbg" frameborder="0" allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    
+</html>
