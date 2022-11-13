@@ -1,6 +1,6 @@
 const express = require('express')
 const exphbs = require('express-handlebars') 
-const mysql = require('mysql')
+const pool = require('./db/conn')
 
 
 const hbs = exphbs.create({
@@ -32,7 +32,7 @@ app.post('/books/insertbook', (req, res) => { //cadastra livros e vai para a est
 
     const insertquery = `INSERT INTO books (titulo, qtpag) VALUES ('${titulo}', '${qtpag}')`
 
-    conn.query(insertquery, function(err){
+    pool.query(insertquery, function(err){
         if (err) {
             console.log(err)
             return
@@ -44,7 +44,7 @@ app.post('/books/insertbook', (req, res) => { //cadastra livros e vai para a est
 
 app.get('/books', (req, res) => { //monta a estante
     const selectquery = `SELECT * FROM books`
-    conn.query(selectquery, function(err, dados){
+    pool.query(selectquery, function(err, dados){
         if (err) {
             console.log(err)
             return
@@ -65,7 +65,7 @@ app.get('/kdbook', (req, res) => { //rota para a busca por título
 app.post('/kdbook/titulob', (req, res) => { //busca livro pelo titulo
     const titulob = req.body.titulo
     const buscaqueryb = `SELECT * FROM books WHERE titulo = '${titulob}'`
-    conn.query(buscaqueryb, function(err, busca){
+    pool.query(buscaqueryb, function(err, busca){
         if (err) {
             console.log(err)
             return
@@ -81,7 +81,7 @@ app.post('/kdbook/titulob', (req, res) => { //busca livro pelo titulo
 app.get('/books/:id', (req, res) => { //mostra apenas o livro selecionado na página exclusiva
     const id = req.params.id
     const buscaquery = `SELECT * FROM books WHERE id = '${id}'`
-    conn.query(buscaquery, function(err, dado){
+    pool.query(buscaquery, function(err, dado){
         if (err) {
             console.log(err)
             return
@@ -97,7 +97,7 @@ app.get('/books/:id', (req, res) => { //mostra apenas o livro selecionado na pá
 app.get('/books/edit/:id', (req, res) => {// abre para edição do livro
     const id = req.params.id
     const buscaqueryc = `SELECT * FROM books WHERE id = '${id}'`
-    conn.query(buscaqueryc, function(err, dado){
+    pool.query(buscaqueryc, function(err, dado){
         if (err) {
             console.log(err)
             return
@@ -117,7 +117,7 @@ app.post('/books/updtbook', (req, res) => { //grava a atualização
 
     const atualizaquery = `UPDATE books SET titulo = '${titulo}', qtpag = '${qtpag}' WHERE id = ${id}`
 
-    conn.query(atualizaquery, function(err){
+    pool.query(atualizaquery, function(err){
         if (err) {
             console.log(err)
             return
@@ -131,7 +131,7 @@ app.post('/books/excluir/:id', (req, res) => {
 
     const deletaquery = `DELETE FROM books WHERE id = ${id}`
 
-    conn.query(deletaquery, function(err){
+    pool.query(deletaquery, function(err){
         if (err) {
             console.log(err)
             return
@@ -140,20 +140,6 @@ app.post('/books/excluir/:id', (req, res) => {
     })
 })
 
-const conn = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'nodemysql',
-})
+app.listen(5500)
 
-conn.connect(function(err) {
-    if (err) {
-        console.log(err)
-    }
-
-    console.log('Conectado e logado no DB')
-
-    app.listen(5500)
-})
 
