@@ -49,6 +49,13 @@ app.get('/users/:id', async (req, res) => {
 
 })
 
+app.get('/users/edit/:id', async (req, res) => {
+    const id = req.params.id
+
+    const user = await User.findOne({raw: true, where: {id: id}})
+    res.render('edituser', {user})
+})
+
 app.post('/users/delete/:id', async (req, res) => {
     const id = req.params.id
 

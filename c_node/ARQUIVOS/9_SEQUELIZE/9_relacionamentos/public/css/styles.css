@@ -81,6 +81,11 @@ h1, h2{
     color: #721c24;
 }
 
+.actions .edit-btn {
+    border-color: rgb(196, 151, 5);
+    color: rgb(196, 151, 5);
+}
+
 .form {
     width: 450px;
     height: 55vh;

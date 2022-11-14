@@ -3,6 +3,7 @@ const exphbs = require('express-handlebars')
 const conn = require('./db/conn')
 
 const User = require('./models/User')
+const Address = require('./models/Address')
 
 const hbs = exphbs.create({
     partialsDir: ['views/partials'],
@@ -49,6 +50,38 @@ app.get('/users/:id', async (req, res) => {
 
 })
 
+app.get('/users/edit/:id', async (req, res) => {
+    const id = req.params.id
+
+    const user = await User.findOne({raw: true, where: {id: id}})
+    res.render('edituser', {user})
+})
+
+app.post('/users/update', async (req, res) => {
+    const id = req.body.id
+    const nome = req.body.nome
+    const profissao = req.body.profissao
+    let newsletter = req.body.newsletter
+
+    if(newsletter === 'on'){
+        newsletter = true
+    } else {
+        newsletter = false
+    }
+
+    const userData = {
+        id,
+        nome,
+        profissao,
+        newsletter
+    }
+
+    await User.update(userData, {where: {id: id}})
+
+    res.redirect('/')
+
+})
+
 app.post('/users/delete/:id', async (req, res) => {
     const id = req.params.id
 
@@ -65,7 +98,10 @@ app.get('/', async (req, res) => {
     res.render('home', {users})
 })
 
-conn.sync().then(() => {
+conn
+.sync({force:true})
+//.sync()
+.then(() => {
     app.listen(5500)
 }).catch((err) => console.log(err))
 
