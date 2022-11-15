@@ -7,4 +7,7 @@ module.exports = class TaskController {
     static showTask(req, res) {
         res.render('tasks/all')
     }
+    static homeTask(req, res) {
+        res.render('tasks/home')
+    }
 }
