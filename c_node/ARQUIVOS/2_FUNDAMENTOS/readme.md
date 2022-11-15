@@ -1,1 +1,0 @@
-# falando sobre módulos internos, core, e externos

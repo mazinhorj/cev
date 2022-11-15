@@ -1,3 +1,0 @@
-npx npm-check-updates -u
-
-verifica forçado as atualizações do npm
